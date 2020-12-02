@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1440px;
+    min-width: 375px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 100px;
+}
+
+header {
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.089);
+    .header__content {
+      display: flex;
+      align-items: center;
+    }
+    .header__logo {
+        padding-right: 52px;
+        display: flex;
+        justify-content: center;
+        .header__img {
+            padding-right: 10px;
+        }
+    }
+    .header__search {
+      max-width: 763px;
+      width: 100%;
+      display: flex;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.01em;
+      margin-right: 62px;
+    }
+    .header__user {
+      padding-left: 21px;
+      width: 33%;
+      display: flex;
+      border-left: 1px solid #EBEBF1;
+      height: 85px;
+      display: flex;
+      align-items: center;
+      .main-img {
+        width: 40px;
+        height: 40px;
+      }
+      .mobile-img {
+        display: none;
+      }
+      .header__desc {
+        color: #BBC4D6;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+        padding-right: 10px;
+      }
+    }
+}
+
+form {
+  width: 100%;
+  position: relative;
+  .button-search:before {
+    content: url(../img/search.svg);
+    color: #fafafa;
+  }
+  .header__input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    color: #BBC4D6;
+    background: #fafafa;
+    border-radius: 5px;
+    border: none;
+    text-indent: 40px;
+    outline: none;
+    border: 1px solid #EBEBF1;
+    &:focus {
+      border: 1px solid #768298;
+      border-radius: 5px;
+      color: #121920;
+    }
+  }
+  .button-search {
+    width: 16px;
+    position: absolute;
+    height: 16px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 12px;
+  }
+}
+
+.partners {
+  padding: 70px 0 90px 0;
+  .partners__h2 {
+    font-size: 36px;
+    font-weight: medium;
+    line-height: 58px;
+    text-transform: uppercase;
+  }
+  .partners__catalog {
+    display: flex;
+    flex-wrap: wrap;
+    img {
+      transition: 0.3s;
+      &:hover {
+        cursor: pointer;
+        box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(164, 164, 164, 0.03);
+        border-radius: 5px;
+      }
+    }
+    .partners__item {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1100px;
+    min-width: 375px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 40px;
+}
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+    min-width: 375px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+}
+  .partners__item {
+    padding-right: 10px;
+    padding-left: 10px;
+    img {
+      width: 213px;
+      height: 120px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    max-width: 575px;
+    min-width: 375px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+  }
+  .header__content {
+    flex-flow: wrap;
+    justify-content: space-between;
+    .header__logo {
+      padding-left: 20px;
+    }
+    .header__search {
+      order: 3;
+      margin-right: 0;
+    }
+    .header__user {
+      border-left: none;
+      margin-right: 20px;
+      .main-img {
+        display: none;
+      }
+    }
+    .header__input {
+      border-radius: 0;
+      background: #fff;
+      border: none;
+      border-top: 1px solid #EBEBF1;
+    }
+  }
+  .partners {
+    .partners__h2 {
+      padding-left: 20px;
+    }
+    .partners__catalog {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+  }
+  .header__user {
+    padding-left: 100px;
+    height: 71px;
+    .main-img {
+      display: none;
+    }
+    .header__desc {
+      display: none;
+    }
+    .mobile-img {
+      display: inline;
+    }
+  }
+  .partners__item img {
+    width: 335px;
+    height: 140px;
+}
+}
